@@ -13,3 +13,4 @@ E:\skinet\Infrastructure\obj\Debug\net9.0\Infrastructure.dll
 E:\skinet\Infrastructure\obj\Debug\net9.0\refint\Infrastructure.dll
 E:\skinet\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
 E:\skinet\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll
+E:\skinet\Infrastructure\obj\Debug\net9.0\Infrastructure.sourcelink.json
