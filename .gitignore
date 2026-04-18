@@ -361,4 +361,13 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-
+/SKINET.Host/appsettings.Development.json
+/SKINET.Host/appsettings.json
+/SKINET.Host/appsettings.json
+/SKINET.Host/appsettings.json
+/SKINET.Host/.vscode
+/.idea/.idea.SKINET/.idea
+/.idea/config/applicationhost.config
+/SKINET.Admin.Dashboard/appsettings.json
+/SKINET.Admin.Dashboard/appsettings.json
+/SKINET.Admin.Dashboard/appsettings.json
