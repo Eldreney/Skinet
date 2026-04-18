@@ -361,13 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/Tallah.Host/appsettings.Development.json
-/Tallah.Host/appsettings.json
-/Tallah.Host/appsettings.json
-/Tallah.Host/appsettings.json
-/Tallah.Host/.vscode
-/.idea/.idea.Tallah/.idea
-/.idea/config/applicationhost.config
-/Tallah.Admin.Dashboard/appsettings.json
-/Tallah.Admin.Dashboard/appsettings.json
-/Tallah.Admin.Dashboard/appsettings.json
+
