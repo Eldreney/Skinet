@@ -47,8 +47,38 @@ namespace Api.Controllers
             return CreatedAtAction(nameof(GetProductById), new { id = product.Id }, product);
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProduct(int id, Product product)
+        {
+            if (id != product.Id || !ProductExists(id))
+                return BadRequest("Product not found");
+            
+
+            _context.Entry(product).State = EntityState.Modified;
+             await _context.SaveChangesAsync();
+            
+
+            return NoContent();
+        }
 
 
+    [HttpDelete]
+    public async Task<IActionResult> DeleteProduct(int id)
+        {
+            var product = await _context.Products.FindAsync(id);
+            if (product == null)
+                return NotFound("Product not found");
+            
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
+             return NoContent();
+        }
+
+
+        private bool ProductExists(int id)
+        {
+            return _context.Products.Any(e => e.Id == id);
+        }
 
 
 
