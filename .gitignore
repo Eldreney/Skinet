@@ -371,3 +371,7 @@ FodyWeavers.xsd
 /SKINET.Admin.Dashboard/appsettings.json
 /SKINET.Admin.Dashboard/appsettings.json
 /SKINET.Admin.Dashboard/appsettings.json
+
+
+
+*.csproj.lscache
