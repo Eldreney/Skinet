@@ -11,6 +11,13 @@ namespace Infrastructure.Data
            storeContext.Set<T>().Add(entity);
         }
 
+        public async Task<int> CountAsync(ISpecification<T> spec)
+        {
+            var query = storeContext.Set<T>().AsQueryable();
+            query = spec.ApplyCriteria(query);
+            return await query.CountAsync();
+        }
+
         public bool Exists(int id)
         {
             return storeContext.Set<T>().Any(e => e.Id == id);
