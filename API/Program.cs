@@ -1,3 +1,4 @@
+using Api.Middleware;
 using Core.Interfaces;
 using Infrastructure.Data;  
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,7 @@ var app = builder.Build();
 
 
 
-
+app.UseMiddleware<ExceptionMiddleware>();
 app.MapControllers();
 try
 {
