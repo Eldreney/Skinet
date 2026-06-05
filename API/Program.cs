@@ -2,9 +2,22 @@ using Api.Middleware;
 using Core.Interfaces;
 using Infrastructure.Data;  
 using Microsoft.EntityFrameworkCore;
-
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins(
+                                "http://localhost:4200",
+                                "https://localhost:4200"
+                            ).AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+
+                      });
+});
 // Add services to the container.
 
 builder.Services.AddControllers(); 
@@ -19,8 +32,8 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 var app = builder.Build();
 
 
-
 app.UseMiddleware<ExceptionMiddleware>();
+app.UseCors(MyAllowSpecificOrigins);
 app.MapControllers();
 try
 {
